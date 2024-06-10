@@ -1,0 +1,137 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Source+Code+Pro:wght@200;300;400;500;600;700&family=Rozha+One&display=swap');
+
+
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+@layer base {
+    body {
+        @apply bg-[#f6f6f6] font-['Outfit'] text-xs sm:text-base text-[#3e3e3e] font-light leading-loose;
+    }
+
+    p {
+        @apply leading-loose;
+    }
+
+    a {
+        @apply transition-all ease-in duration-300;
+    }
+
+    h1 {
+        @apply font-['Rozha_One'];
+    }
+
+    h2 {
+        @apply font-['Rozha_One'] pb-8 font-semibold text-3xl sm:text-4xl text-slate-500 dark:text-blue-400 text-center tracking-tighter;
+    }
+
+    button#outline-btn {
+        @apply font-normal transition-all ease-in duration-300;
+    }
+
+    button[type='submit']#outline-btn {
+        @apply font-['Source_Code_Pro'] text-sm tracking-tight mx-auto flex items-center my-2 pl-6 py-3 border border-gray-300 rounded hover:border-emerald-400 dark:border-gray-600 dark:hover:border-teal-200;
+    }
+
+    section.container {
+        @apply max-w-screen-lg mx-auto md:pl-20 px-8 py-12 sm:py-28;
+    }
+
+    .gradient {
+        @apply bg-gradient-to-r from-slate-500 to-emerald-300 dark:from-blue-400 dark:to-teal-200 inline-block text-transparent bg-clip-text;
+    }
+}
+
+@layer components {
+
+    /* NAVBAR COMPONENT */
+    .navbar li {
+        @apply font-['Source_Code_Pro'] text-sm font-medium hover:text-emerald-400 dark:hover:text-teal-200 cursor-pointer;
+    }
+
+    .navbar button[type='submit']#navbar-btn {
+        @apply font-['Source_Code_Pro'] text-[#3e3e3e] dark:text-slate-300 mx-auto flex items-center my-0 sm:my-2 px-5 py-2 sm:px-6 sm:py-3 border border-gray-300 rounded hover:border-emerald-400 dark:border-gray-600 dark:hover:border-teal-200 transition-all ease-in duration-300;
+    }
+
+    .navbar a.mobile-links {
+        @apply font-['Source_Code_Pro'] w-1/2 m-2 p-3 flex justify-center items-center hover:text-emerald-400 dark:hover:text-teal-200 cursor-pointer;
+    }
+
+    /* HOME COMPONENT */
+    #main .intro {
+        @apply font-semibold text-2xl sm:text-5xl font-['Rozha+One'];
+    }
+
+    #main a.home,
+    #about a.about {
+        @apply text-emerald-400 dark:text-teal-200 hover:text-slate-500 dark:hover:text-blue-400 transition-all ease-in duration-300 cursor-pointer;
+    }
+
+    #main button[type='submit'],
+    #resume button[type='submit'] {
+        @apply w-[158px];
+    }
+
+    /* ABOUT COMPONENT */
+    #about ul.tech-list li {
+        @apply flex;
+    }
+
+    /* EXPERIENCE COMPONENT */
+    #experience ul li {
+        @apply ml-4 flex;
+    }
+
+    #experience a {
+        @apply text-emerald-400 dark:text-teal-200 hover:text-slate-500 dark:hover:text-blue-400 cursor-pointer;
+    }
+
+    /* PROJECTS COMPONENT */
+    #projects .project-links {
+        @apply inline-flex items-center hover:text-emerald-300 dark:hover:text-teal-200 transition-all ease-in duration-300;
+    }
+
+    #projects button.project-links svg {
+        @apply w-[20px] h-[20px] ml-3;
+    }
+
+    /* CONTACT COMPONENT */
+    #contact label {
+        @apply block font-['Source_Code_Pro'] font-medium;
+    }
+
+    #contact input,
+    #contact textarea {
+        @apply font-['Outfit'] w-full my-2 p-2 rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 focus:outline focus:outline-emerald-300 dark:focus:outline-teal-200;
+    }
+
+    #contact button[type='submit'] {
+        @apply w-[117px];
+    }
+
+    /* FOOTER COMPONENT */
+    footer .social li {
+        @apply px-6 py-3 flex justify-between items-center hover:ml-[6px] hover:text-emerald-400 dark:hover:text-teal-200 cursor-pointer transition-all ease-in;
+    }
+
+    footer .mini-social li {
+        @apply p-3 inline-flex hover:text-emerald-400 dark:hover:text-teal-200;
+    }
+}
+
+@layer utilities {
+    .light {
+        @apply bg-[#f6f6f6] text-[#3e3e3e] transition-all ease-in duration-300;
+    }
+
+    .dark {
+        @apply bg-gray-800 text-slate-300 transition-all ease-in duration-300;
+    }
+}
